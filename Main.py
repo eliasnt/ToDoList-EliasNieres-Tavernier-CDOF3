@@ -1,7 +1,5 @@
 import os
 
-
-
 inp=5
 comp=0
 tasks=[]
@@ -25,7 +23,7 @@ while(inp!=4):
         if(len(tasks)!=0):
             print("Choose the task to delete")
             entry=input()
-            if(entry.isnumeric!=False):
+            if(entry.isnumeric):
                 entry=int(entry)
                 if(entry>len(tasks)):
                     os.system('cls')
@@ -42,7 +40,7 @@ while(inp!=4):
         if(len(tasks)!=0):
             print("Which task have you completed")
             entry=input()
-            if(entry.isnumeric!=False):
+            if(entry.isnumeric):
                 entry=int(entry)
                 if(entry>len(tasks)):
                     os.system('cls')
