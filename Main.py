@@ -43,6 +43,7 @@ while(inp!=4):
             if(entry.isnumeric):
                 entry=int(entry)
                 if 0 < entry <= len(tasks):
+                    os.system('cls')
                     tasks.pop(entry - 1)
                     comp=comp+1
                 else:
