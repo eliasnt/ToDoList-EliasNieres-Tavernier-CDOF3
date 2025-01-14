@@ -20,16 +20,16 @@ while(inp!=4):
         tasks.append(input())
         os.system('cls')
     elif(input1=="2"):
-        if(len(tasks)!=0):
+        if tasks:
             print("Choose the task to delete")
             entry=input()
             if(entry.isnumeric):
                 entry=int(entry)
-                if(entry>len(tasks)):
-                    os.system('cls')
-                    print("impossible to remove")
+                if 0 < entry <= len(tasks):
+                    tasks.pop(entry - 1)
                 else:
-                    tasks.pop(entry-1)
+                    os.system('cls')
+                    print("impossible de remove")
             else:
                 os.system('cls')
                 print("impossible to remove")
@@ -37,17 +37,18 @@ while(inp!=4):
             os.system('cls')
             print("The list is empty you can't remove anything")
     elif(input1=="3"):
-        if(len(tasks)!=0):
+        if tasks:
             print("Which task have you completed")
             entry=input()
             if(entry.isnumeric):
                 entry=int(entry)
-                if(entry>len(tasks)):
-                    os.system('cls')
-                    print("the task doesnt exist")
-                else:
-                    tasks.pop(entry-1)
+                if 0 < entry <= len(tasks):
+                    tasks.pop(entry - 1)
                     comp=comp+1
+                else:
+                    os.system('cls')
+                    print("impossible de remove")
+
             else:
                 os.system('cls')
                 print("the task doesnt exist")
